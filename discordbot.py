@@ -22,7 +22,7 @@ async def date(ctx):
     await ctx.send(datetime.date.today())    
     
 
-async def logmsg(msg:Message)
+async def logmsg(msg:Message):
     return await msg.content
     
 @bot.command()
