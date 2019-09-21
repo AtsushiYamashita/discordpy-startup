@@ -22,4 +22,9 @@ async def date(ctx):
     await ctx.send(datetime.date.today())    
     
 
+@bot.command()
+async def logrp(ctx, arg1: int):
+    await ctx.send(ctx.message)
+    
+
 bot.run(token)
