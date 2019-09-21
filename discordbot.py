@@ -24,7 +24,8 @@ async def date(ctx):
 
 @bot.command()
 async def logrp(ctx, arg1: int):
-    await ctx.send(ctx.message)
+    msg = await ctx.message.channel.history(limit=arg1).flatten()
+    await ctx.send(msg)
     
 
 bot.run(token)
