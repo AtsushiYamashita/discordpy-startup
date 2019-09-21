@@ -16,4 +16,9 @@ async def ping(ctx):
     await ctx.send('pong')
 
 
+@bot.command()
+async def date(ctx):
+    await ctx.send(datetime.date.today())    
+    
+
 bot.run(token)
