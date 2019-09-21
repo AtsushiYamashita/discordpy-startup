@@ -22,10 +22,13 @@ async def date(ctx):
     await ctx.send(datetime.date.today())    
     
 
+async def logmsg(msg:Message)
+    return await msg.content
+    
 @bot.command()
 async def logrp(ctx, arg1: int):
     msgs = await ctx.message.channel.history(limit=arg1).flatten()    
-    msg = ",".join(map(str,map(lambda x: x.content, msgs)))
+    msg = ",".join(map(str,map(logmsg, msgs)))
     await ctx.send(msg)
 
 bot.run(token)
